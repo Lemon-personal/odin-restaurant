@@ -16,8 +16,14 @@ const storeHours = [
 
 
 const initAbout = () => {
+    const infoDiv = document.createElement("div")
     const blurbDiv = document.createElement("div")
     const storeInfoDiv = document.createElement("div")
+    const mapDiv = document.createElement("div")
+
+    infoDiv.setAttribute("class", "info")
+    mapDiv.setAttribute("class", "map")
+
 
     const blurbHeader = document.createElement("h1")
     const blurbBlurb = document.createElement("p")
@@ -48,8 +54,11 @@ const initAbout = () => {
 
     blurbDiv.appendChild(blurbHeader)
     blurbDiv.appendChild(blurbBlurb)
-    aboutDiv.appendChild(blurbDiv)
-    aboutDiv.appendChild(storeInfoDiv)
+    infoDiv.appendChild(blurbDiv)
+    infoDiv.appendChild(storeInfoDiv)
+    aboutDiv.appendChild(infoDiv)
+    aboutDiv.appendChild(mapDiv)
+
 }
 
 const toggle = () => {

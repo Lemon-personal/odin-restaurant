@@ -1,23 +1,150 @@
 @import url(https://fonts.bunny.net/css?family=akaya-telivigala:400);
 
 body{
+    height: 100vh;
     font-family: 'Akaya Telivigala', sans-serif;
     margin: 0;
-    background-color: rgba(201, 199, 199, 0.726);
+    background-color: rgba(164, 123, 180, 0.726);
 }
 
 header{
+    position: sticky;
+    top:1px;
+    border-bottom: 3px solid black;
+    background-color: white;
+    padding: 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 header ul{
     padding: 0;
     list-style: none;
     display: flex;
+    gap:2rem
 }
 
-.disabled {
+#header-buttons button{
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    background-color: white;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+}
+
+#header-buttons .selected{
+    text-decoration: underline;
+    color:rgb(84, 63, 92);
+}
+
+#header-buttons button:hover{
+    text-decoration: underline;
+    color:rgb(84, 63, 92);
+}
+
+footer{
+    height: 20%;
+    background-color: black;
+}
+
+#home{
+    display: grid;
+    grid-template-rows: 2.5fr 1fr;
+}
+
+#home .banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.banner div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home .idk{
+    box-sizing: border-box;
+    padding:3rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.idk p{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 45rem;
+    margin: 0;
+}
+
+.idk h2{
+    font-size: 2rem;
+}
+
+#menu{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu img{
+    width: 400px;
+    border: 3px solid rgb(58, 58, 58);
+    border-radius: 10px;
+}
+
+.menu-items {
+    width: 40%;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(400px,1fr));
+    row-gap: 3rem;
+}
+
+.entry{
+    background-color: white;
+    border:3px solid black;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.entry p{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 500px
+}
+.entry h3{
+    font-size: 2rem;
+}
+
+#about{
+    margin-top: 2rem;
+    padding:1rem;
+    border:3px solid black;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info{
+    font-size: 1.5rem;
+}
+.info h1{
+    color:rgb(173, 113, 230)
+}
+
+#about .map{
+    border:3px solid black
+}
+
+
+#home[class="disabled"],#menu[class="disabled"],#about[class="disabled"]{
     display: none;
 }

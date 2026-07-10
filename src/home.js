@@ -8,17 +8,22 @@ contentDiv.appendChild(homeDiv)
 const initHome = () => {
     const bannerDiv = document.createElement("div")
     const idkDiv = document.createElement("div")
+    bannerDiv.setAttribute("class", "banner")
+    idkDiv.setAttribute("class", "idk")
 
+
+    const bannerText = document.createElement("div")
     const bannerImg = document.createElement("img")
     const bannerHeader = document.createElement("h1")
     const headerSub = document.createElement("h3")
     bannerImg.setAttribute("src","")
     bannerHeader.textContent = "YOUR TASTE OF A RATS PALETTE"
     headerSub.textContent = "Its not bad trust us."
-    bannerDiv.appendChild(bannerImg)
-    bannerDiv.appendChild(bannerHeader)
-    bannerDiv.appendChild(headerSub)
+    bannerText.appendChild(bannerHeader)
+    bannerText.appendChild(headerSub)
 
+    bannerDiv.appendChild(bannerImg)
+    bannerDiv.appendChild(bannerText)
 
     const idkHeader = document.createElement("h2")
     const idkPara = document.createElement("p")
